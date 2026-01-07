@@ -14,6 +14,7 @@ cd "$REPO_ROOT"
 : "${USER_GITHUB:?Set USER_GITHUB}"
 : "${TOKEN_GITHUB:?Set TOKEN_GITHUB}"
 
+
 REGISTRY="ghcr.io"
 OWNER="$USER_GITHUB"
 IMAGE="symphony-api"
