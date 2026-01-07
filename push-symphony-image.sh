@@ -22,7 +22,7 @@ IMAGE_BASE="$REGISTRY/$OWNER/$IMAGE"
 GITHUB_REF_NAME="symphony-api-$(date +%Y%m%d%H%M%S)"
 
 DOCKERFILE="$REPO_ROOT/api/Dockerfile"
-GIT_SHA="$(GITHUB_REF_NAME)"
+GIT_SHA="$GITHUB_REF_NAME"
 
 info() { echo ":information_source:  $1"; }
 ok()   { echo ":white_check_mark: $1"; }
