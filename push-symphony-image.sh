@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 set -Eeuo pipefail
-cd "${GITHUB_WORKSPACE:-$(pwd)}"
+
 # --------------------------------------------------
 # Resolve repo root safely
 # --------------------------------------------------
