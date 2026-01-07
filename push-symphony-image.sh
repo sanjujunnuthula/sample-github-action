@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 set -Eeuo pipefail
-
+cd "${GITHUB_WORKSPACE:-$(pwd)}"
 # --------------------------------------------------
 # Resolve repo root safely
 # --------------------------------------------------
@@ -18,9 +18,10 @@ REGISTRY="ghcr.io"
 OWNER="$USER_GITHUB"
 IMAGE="symphony-api"
 IMAGE_BASE="$REGISTRY/$OWNER/$IMAGE"
+GITHUB_REF_NAME="symphony-api-$(date +%Y%m%d%H%M%S)"
 
 DOCKERFILE="$REPO_ROOT/api/Dockerfile"
-GIT_SHA="$(git rev-parse --short HEAD)"
+GIT_SHA="$(GITHUB_REF_NAME)"
 
 info() { echo ":information_source:  $1"; }
 ok()   { echo ":white_check_mark: $1"; }
