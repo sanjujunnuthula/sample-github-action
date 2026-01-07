@@ -28,6 +28,11 @@ jobs:
          registry: ghcr.io
          username: ${{ github.actor }}
          password: ${{ secrets.TOKEN_GITHUB }}
+     - name: Debug git context
+       run: |
+        pwd
+        ls -la
+        git status || echo "git not available"
      - name: Make push script executable
        run: chmod +x ./push-symphony-image.sh
      - name: Build & Push Symphony API Images
