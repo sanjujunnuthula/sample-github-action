@@ -33,4 +33,4 @@ jobs:
          USER_GITHUB: ${{ github.repository_owner }}
          TOKEN_GITHUB: ${{ secrets.TOKEN_GITHUB }}
        run: |
-         ./pipeline/push-symphony-image.sh
+         ./push-symphony-image.sh
